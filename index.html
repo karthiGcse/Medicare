@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>MediCare Ecosystem | Master Digital Health Platform</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: '#eff6ff', 100: '#dbeafe', 500: '#3b82f6', 600: '#2563eb', 700: '#1d4ed8', 900: '#1e3a8a'
+                        },
+                        accent: {
+                            purple: '#8b5cf6', pink: '#ec4899', emerald: '#10b981', cyan: '#06b6d4', rose: '#f43f5e'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { background-color: #0b0f19; color: #f8fafc; font-family: 'Inter', sans-serif; overflow-x: hidden; }
+        .glass-card { background: rgba(30, 41, 59, 0.6); backdrop-filter: blur(16px); border: 1px solid rgba(255, 255, 255, 0.08); }
+        .glass-card:hover { border-color: rgba(59, 130, 246, 0.4); transform: translateY(-3px); }
+        .gradient-text { background: linear-gradient(135deg, #60a5fa 0%, #a78bfa 50%, #f472b6 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .glow-effect { box-shadow: 0 0 50px -10px rgba(59, 130, 246, 0.3); }
+    </style>
+</head>
+<body class="min-h-screen pb-24">
+
+    <!-- Top Announcement Bar -->
+    <div class="bg-gradient-to-r from-blue-900/60 via-purple-900/60 to-pink-900/60 border-b border-white/10 text-xs py-2 px-4 text-center flex items-center justify-center gap-2">
+        <span class="inline-block w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+        <span class="text-slate-200 font-medium">MediCare 2.0 Connected Network Online</span>
+        <span class="text-slate-400">• 15 Specialized Clinical Modules Fully Linked</span>
+    </div>
+
+    <!-- Main Navigation Header -->
+    <header class="sticky top-0 z-40 bg-slate-950/80 backdrop-blur-xl border-b border-white/10 px-6 py-4">
+        <div class="max-w-7xl mx-auto flex items-center justify-between">
+            <div class="flex items-center gap-4">
+                <img src="app logo/medicare_combined_logo.png" alt="MediCare Logo" class="h-10 w-auto rounded-lg shadow-md border border-white/10">
+                <div>
+                    <h1 class="text-xl font-bold text-white tracking-tight flex items-center gap-2">
+                        Medi<span class="text-red-500">C</span>are
+                        <span class="text-xs bg-blue-500/20 text-blue-400 px-2 py-0.5 rounded-full font-semibold border border-blue-500/30">ENTERPRISE HUB</span>
+                    </h1>
+                    <p class="text-xs text-slate-400 hidden sm:block">Unified Digital Healthcare Ecosystem</p>
+                </div>
+            </div>
+
+            <!-- Quick Action Links -->
+            <div class="flex items-center gap-3">
+                <a href="Dashboad page/code.html" class="px-4 py-2 bg-blue-600 hover:bg-blue-500 text-white rounded-xl font-semibold text-xs transition flex items-center gap-2 shadow-lg shadow-blue-600/30">
+                    <span class="material-symbols-outlined text-sm">grid_view</span>
+                    Patient Dashboard
+                </a>
+                <a href="Login page/stitch_medicare_login_page/attractive_login_experience/code.html" class="px-4 py-2 bg-slate-800 hover:bg-slate-700 text-slate-200 rounded-xl font-semibold text-xs border border-white/10 transition flex items-center gap-2">
+                    <span class="material-symbols-outlined text-sm">lock</span>
+                    Sign In
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative max-w-7xl mx-auto px-6 pt-12 pb-8">
+        <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-blue-600/20 rounded-full blur-3xl pointer-events-none"></div>
+        <div class="relative z-10 text-center max-w-3xl mx-auto">
+            <span class="inline-flex items-center gap-2 px-3 py-1 bg-purple-500/10 text-purple-300 rounded-full text-xs font-semibold border border-purple-500/20 mb-4">
+                <span class="material-symbols-outlined text-sm">hub</span> All-In-One Healthcare Navigation Portal
+            </span>
+            <h2 class="text-4xl sm:text-5xl font-extrabold text-white tracking-tight mb-4 leading-tight">
+                Connect to <span class="gradient-text">Every Aspect of Your Health</span>
+            </h2>
+            <p class="text-slate-400 text-base mb-8 leading-relaxed">
+                Explore all 15 clinical modules, from AI voice consultation and drone medicine delivery to live hospital queue tokens, bio-nutrition planning, and emergency care.
+            </p>
+
+            <!-- Global Live Search Bar -->
+            <div class="relative max-w-2xl mx-auto mb-10">
+                <span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-slate-400">search</span>
+                <input id="hero-search" type="text" placeholder="Search modules, doctors, tests, pharmacy, symptoms, queue..." class="w-full pl-12 pr-28 py-4 bg-slate-900/90 border border-white/15 rounded-2xl text-white placeholder-slate-400 text-sm focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 shadow-2xl transition">
+                <span class="absolute right-4 top-1/2 -translate-y-1/2 text-xs bg-slate-800 text-slate-400 px-2.5 py-1 rounded-lg border border-white/10 font-mono">Ctrl+K</span>
+            </div>
+
+            <!-- Quick Stats Ticker -->
+            <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 max-w-4xl mx-auto text-left">
+                <div class="glass-card p-4 rounded-2xl">
+                    <span class="text-xs text-slate-400 block mb-1">AI Health Diagnostics</span>
+                    <span class="text-xl font-bold text-emerald-400 flex items-center gap-1">
+                        99.4% <span class="text-xs text-slate-400 font-normal">Accuracy</span>
+                    </span>
+                </div>
+                <div class="glass-card p-4 rounded-2xl">
+                    <span class="text-xs text-slate-400 block mb-1">Telemedicine Doctors</span>
+                    <span class="text-xl font-bold text-blue-400 flex items-center gap-1">
+                        500+ <span class="text-xs text-slate-400 font-normal">Specialists</span>
+                    </span>
+                </div>
+                <div class="glass-card p-4 rounded-2xl">
+                    <span class="text-xs text-slate-400 block mb-1">Drone Delivery Speed</span>
+                    <span class="text-xl font-bold text-purple-400 flex items-center gap-1">
+                        &lt; 15 mins <span class="text-xs text-slate-400 font-normal">ETA</span>
+                    </span>
+                </div>
+                <div class="glass-card p-4 rounded-2xl">
+                    <span class="text-xs text-slate-400 block mb-1">Smart Hospital Queue</span>
+                    <span class="text-xl font-bold text-pink-400 flex items-center gap-1">
+                        Zero Wait <span class="text-xs text-slate-400 font-normal">Tokens</span>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Module Category Filter Tabs -->
+    <section class="max-w-7xl mx-auto px-6 my-6">
+        <div class="flex items-center gap-3 overflow-x-auto pb-2 scrollbar-none">
+            <button class="filter-tab active px-4 py-2 rounded-xl text-xs font-semibold bg-blue-600 text-white transition shadow-md" data-filter="all">All 15 Modules</button>
+            <button class="filter-tab px-4 py-2 rounded-xl text-xs font-semibold bg-slate-800 text-slate-300 hover:bg-slate-700 transition" data-filter="ai">AI & Clinical Suite</button>
+            <button class="filter-tab px-4 py-2 rounded-xl text-xs font-semibold bg-slate-800 text-slate-300 hover:bg-slate-700 transition" data-filter="doctors">Doctors & Telemedicine</button>
+            <button class="filter-tab px-4 py-2 rounded-xl text-xs font-semibold bg-slate-800 text-slate-300 hover:bg-slate-700 transition" data-filter="pharmacy">Pharmacy & Drone Logistics</button>
+            <button class="filter-tab px-4 py-2 rounded-xl text-xs font-semibold bg-slate-800 text-slate-300 hover:bg-slate-700 transition" data-filter="hospital">Hospitals & Labs</button>
+            <button class="filter-tab px-4 py-2 rounded-xl text-xs font-semibold bg-slate-800 text-slate-300 hover:bg-slate-700 transition" data-filter="wellness">Wellness & Family</button>
+        </div>
+    </section>
+
+    <!-- 15 Modules Grid -->
+    <main class="max-w-7xl mx-auto px-6 py-4">
+        <div id="modules-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+            <!-- Card 1: Dashboard -->
+            <div class="module-card glass-card p-6 rounded-3xl transition duration-300 flex flex-col justify-between" data-category="all">
+                <div>
+                    <div class="flex items-center justify-between mb-4">
+                        <div class="w-12 h-12 rounded-2xl bg-blue-500/10 border border-blue-500/20 flex items-center justify-center text-blue-400">
+                            <span class="material-symbols-outlined text-2xl">grid_view</span>
+                        </div>
+                        <span class="text-[10px] font-bold uppercase tracking-wider text-blue-400 bg-blue-500/10 px-3 py-1 rounded-full border border-blue-500/20">Core Hub</span>
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-2">Patient Command Dashboard</h3>
+                    <p class="text-xs text-slate-400 mb-4 leading-relaxed">Centralized biometric pulse, wellness score (92%), vital trends, medication adherence, and emergency shortcuts.</p>
+                </div>
+                <a href="Dashboad page/code.html" class="w-full py-3 bg-blue-600/20 hover:bg-blue-600 text-blue-300 hover:text-white rounded-xl text-xs font-bold transition flex items-center justify-center gap-2 border border-blue-500/30">
+                    Open Dashboard <span class="material-symbols-outlined text-sm">arrow_forward</span>
+                </a>
+            </div>
+
+            <!-- Card 2: AI Assistant -->
+            <div class="module-card glass-card p-6 rounded-3xl transition duration-300 flex flex-col justify-between" data-category="ai">
+                <div>
+                    <div class="flex items-center justify-between mb-4">
+                        <div class="w-12 h-12 rounded-2xl bg-purple-500/10 border border-purple-500/20 flex items-center justify-center text-purple-400">
+                            <span class="material-symbols-outlined text-2xl">smart_toy</span>
+                        </div>
+                        <span class="text-[10px] font-bold uppercase tracking-wider text-purple-400 bg-purple-500/10 px-3 py-1 rounded-full border border-purple-500/20">AI Clinical</span>
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-2">AI Health Consultation Assistant</h3>
+                    <p class="text-xs text-slate-400 mb-4 leading-relaxed">Conversational AI medical assistant providing real-time voice & text consultations with intelligent diagnostic triage.</p>
+                </div>
+                <a href="AI Assistant/code.html" class="w-full py-3 bg-purple-600/20 hover:bg-purple-600 text-purple-300 hover:text-white rounded-xl text-xs font-bold transition flex items-center justify-center gap-2 border border-purple-500/30">
+                    Start Consultation <span class="material-symbols-outlined text-sm">chat</span>
+                </a>
+            </div>
+
+            <!-- Card 3: AI Symptom Checker -->
+            <div class="module-card glass-card p-6 rounded-3xl transition duration-300 flex flex-col justify-between" data-category="ai">
+                <div>
+                    <div class="flex items-center justify-between mb-4">
+                        <div class="w-12 h-12 rounded-2xl bg-rose-500/10 border border-rose-500/20 flex items-center justify-center text-rose-400">
+                            <span class="material-symbols-outlined text-2xl">stethoscope</span>
+                        </div>
+                        <span class="text-[10px] font-bold uppercase tracking-wider text-rose-400 bg-rose-500/10 px-3 py-1 rounded-full border border-rose-500/20">Symptom Checker</span>
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-2">AI Symptom Intake & Assessment</h3>
+                    <p class="text-xs text-slate-400 mb-4 leading-relaxed">Interactive symptom questionnaire generating instant AI clinical reports and critical risk alert triages.</p>
+                </div>
+                <div class="flex flex-col gap-2">
+                    <a href="Symptom check page/symptom_intake_neumorphic_edition/code.html" class="w-full py-2.5 bg-rose-600/20 hover:bg-rose-600 text-rose-300 hover:text-white rounded-xl text-xs font-bold transition flex items-center justify-center gap-2 border border-rose-500/30">
+                        Check Symptoms <span class="material-symbols-outlined text-sm">arrow_forward</span>
+                    </a>
+                    <div class="flex items-center gap-2 text-[10px]">
+                        <a href="Symptom check page/analysis_report_neumorphic_edition/code.html" class="flex-1 text-center text-slate-400 hover:text-rose-300 py-1 bg-slate-900/50 rounded-lg">View Analysis</a>
+                        <a href="Symptom check page/high_risk_report_neumorphic_edition/code.html" class="flex-1 text-center text-slate-400 hover:text-rose-300 py-1 bg-slate-900/50 rounded-lg">High Risk Report</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 4: Global Telemedicine -->
+            <div class="module-card glass-card p-6 rounded-3xl transition duration-300 flex flex-col justify-between" data-category="doctors">
+                <div>
+                    <div class="flex items-center justify-between mb-4">
+                        <div class="w-12 h-12 rounded-2xl bg-cyan-500/10 border border-cyan-500/20 flex items-center justify-center text-cyan-400">
+                            <span class="material-symbols-outlined text-2xl">videocam</span>
+                        </div>
+                        <span class="text-[10px] font-bold uppercase tracking-wider text-cyan-400 bg-cyan-500/10 px-3 py-1 rounded-full border border-cyan-500/20">Telemedicine</span>
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-2">Global Telemedicine Portal</h3>
+                    <p class="text-xs text-slate-400 mb-4 leading-relaxed">Book HD virtual video appointments with top global medical specialists, featuring patient intake & booking confirmation.</p>
+                </div>
+                <div class="flex flex-col gap-2">
+                    <a href="Global Telemedicine/stitch_medicare_login_page/ultra_premium_global_telemedicine_experience/code.html" class="w-full py-2.5 bg-cyan-600/20 hover:bg-cyan-600 text-cyan-300 hover:text-white rounded-xl text-xs font-bold transition flex items-center justify-center gap-2 border border-cyan-500/30">
+                        Explore Telemedicine <span class="material-symbols-outlined text-sm">video_call</span>
+                    </a>
+                    <a href="Global Telemedicine/stitch_medicare_login_page/elite_specialist_discovery_refined_outlines/code.html" class="text-center text-xs text-slate-400 hover:text-cyan-300 py-1">Find Doctors & Specialists →</a>
+                </div>
+            </div>
+
+            <!-- Card 5: Doctor Appointment Booking -->
+            <div class="module-card glass-card p-6 rounded-3xl transition duration-300 flex flex-col justify-between" data-category="doctors">
+                <div>
+                    <div class="flex items-center justify-between mb-4">
+                        <div class="w-12 h-12 rounded-2xl bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center text-emerald-400">
+                            <span class="material-symbols-outlined text-2xl">calendar_month</span>
+                        </div>
+                        <span class="text-[10px] font-bold uppercase tracking-wider text-emerald-400 bg-emerald-500/10 px-3 py-1 rounded-full border border-emerald-500/20">Doctor Booking</span>
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-2">Doctor Appointment Flow</h3>
+                    <p class="text-xs text-slate-400 mb-4 leading-relaxed">Multi-step appointment scheduling wizard with patient intake, medical history form, and instant confirmation.</p>
+                </div>
+                <a href="doctor appointment booking/stitch_medicare_login_page/ultra_premium_appointment_booking_with_intake_step/code.html" class="w-full py-3 bg-emerald-600/20 hover:bg-emerald-600 text-emerald-300 hover:text-white rounded-xl text-xs font-bold transition flex items-center justify-center gap-2 border border-emerald-500/30">
+                    Book Doctor Appointment <span class="material-symbols-outlined text-sm">event</span>
+                </a>
+            </div>
+
+            <!-- Card 6: Pharmacy & Drone Delivery -->
+            <div class="module-card glass-card p-6 rounded-3xl transition duration-300 flex flex-col justify-between" data-category="pharmacy">
+                <div>
+                    <div class="flex items-center justify-between mb-4">
+                        <div class="w-12 h-12 rounded-2xl bg-indigo-500/10 border border-indigo-500/20 flex items-center justify-center text-indigo-400">
+                            <span class="material-symbols-outlined text-2xl">flight_takeoff</span>
+                        </div>
+                        <span class="text-[10px] font-bold uppercase tracking-wider text-indigo-400 bg-indigo-500/10 px-3 py-1 rounded-full border border-indigo-500/20">Drone Delivery</span>
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-2">Drone Medicine Delivery</h3>
+                    <p class="text-xs text-slate-400 mb-4 leading-relaxed">Live GPS satellite tracking for autonomous medicine drone deliveries with instant order summary & checkout.</p>
+                </div>
+                <div class="flex flex-col gap-2">
+                    <a href="Drone delivery/stitch_medicare_login_page/drone_medicine_delivery/code.html" class="w-full py-2.5 bg-indigo-600/20 hover:bg-indigo-600 text-indigo-300 hover:text-white rounded-xl text-xs font-bold transition flex items-center justify-center gap-2 border border-indigo-500/30">
+                        Live Drone Tracking <span class="material-symbols-outlined text-sm">near_me</span>
+                    </a>
+                    <a href="Drone delivery/stitch_medicare_login_page/order_medicine_summary_checkout/code.html" class="text-center text-xs text-slate-400 hover:text-indigo-300 py-1">Order Checkout →</a>
+                </div>
+            </div>
+
+            <!-- Card 7: Prescriptions & Meds -->
+            <div class="module-card glass-card p-6 rounded-3xl transition duration-300 flex flex-col justify-between" data-category="pharmacy">
+                <div>
+                    <div class="flex items-center justify-between mb-4">
+                        <div class="w-12 h-12 rounded-2xl bg-teal-500/10 border border-teal-500/20 flex items-center justify-center text-teal-400">
+                            <span class="material-symbols-outlined text-2xl">medication</span>
+                        </div>
+                        <span class="text-[10px] font-bold uppercase tracking-wider text-teal-400 bg-teal-500/10 px-3 py-1 rounded-full border border-teal-500/20">Prescriptions</span>
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-2">Prescriptions & Manual Entry</h3>
+                    <p class="text-xs text-slate-400 mb-4 leading-relaxed">Manage current prescriptions, dosages, refills, and add new medications with custom reminder schedules.</p>
+                </div>
+                <div class="flex items-center gap-2">
+                    <a href="Add medican/stitch_medicare_login_page/medicare_prescriptions_silk_edition/code.html" class="flex-1 py-2.5 bg-teal-600/20 hover:bg-teal-600 text-teal-300 hover:text-white rounded-xl text-xs font-bold transition text-center border border-teal-500/30">
+                        Prescriptions
+                    </a>
+                    <a href="Add medican/stitch_medicare_login_page/manual_medication_entry_silk_edition/code.html" class="flex-1 py-2.5 bg-slate-800 hover:bg-slate-700 text-slate-300 rounded-xl text-xs font-semibold transition text-center border border-white/10">
+                        + Add Med
+                    </a>
+                </div>
+            </div>
+
+            <!-- Card 8: Medicine Lookup & Interactions -->
+            <div class="module-card glass-card p-6 rounded-3xl transition duration-300 flex flex-col justify-between" data-category="pharmacy">
+                <div>
+                    <div class="flex items-center justify-between mb-4">
+                        <div class="w-12 h-12 rounded-2xl bg-blue-500/10 border border-blue-500/20 flex items-center justify-center text-blue-400">
+                            <span class="material-symbols-outlined text-2xl">search</span>
+                        </div>
+                        <span class="text-[10px] font-bold uppercase tracking-wider text-blue-400 bg-blue-500/10 px-3 py-1 rounded-full border border-blue-500/20">Drug Lookup</span>
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-2">Medicine Lookup & Interaction</h3>
+                    <p class="text-xs text-slate-400 mb-4 leading-relaxed">Search clinical drug databases, view side effects, contraindications, and analyze multi-drug interactions.</p>
+                </div>
+                <div class="flex items-center gap-2">
+                    <a href="medical lookup/stitch_medicare_login_page/medicine_lookup_chroma_edition/code.html" class="flex-1 py-2.5 bg-blue-600/20 hover:bg-blue-600 text-blue-300 hover:text-white rounded-xl text-xs font-bold transition text-center border border-blue-500/30">
+                        Search Drugs
+                    </a>
+                    <a href="medical interaction page/code.html" class="flex-1 py-2.5 bg-slate-800 hover:bg-slate-700 text-slate-300 rounded-xl text-xs font-semibold transition text-center border border-white/10">
+                        Interactions
+                    </a>
+                </div>
+            </div>
+
+            <!-- Card 9: Home Lab Tests -->
+            <div class="module-card glass-card p-6 rounded-3xl transition duration-300 flex flex-col justify-between" data-category="hospital">
+                <div>
+                    <div class="flex items-center justify-between mb-4">
+                        <div class="w-12 h-12 rounded-2xl bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center text-emerald-400">
+                            <span class="material-symbols-outlined text-2xl">science</span>
+                        </div>
+                        <span class="text-[10px] font-bold uppercase tracking-wider text-emerald-400 bg-emerald-500/10 px-3 py-1 rounded-full border border-emerald-500/20">Lab Tests</span>
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-2">Home Lab Test Booking</h3>
+                    <p class="text-xs text-slate-400 mb-4 leading-relaxed">Book home phlebotomy sample collection, view test results, enter patient info, and process secure payments.</p>
+                </div>
+                <a href="Home lab test/stitch_medicare_login_page/home_lab_booking_results_search/code.html" class="w-full py-3 bg-emerald-600/20 hover:bg-emerald-600 text-emerald-300 hover:text-white rounded-xl text-xs font-bold transition flex items-center justify-center gap-2 border border-emerald-500/30">
+                    Book Home Lab Test <span class="material-symbols-outlined text-sm">biotech</span>
+                </a>
+            </div>
+
+            <!-- Card 10: Smart Hospital Queue -->
+            <div class="module-card glass-card p-6 rounded-3xl transition duration-300 flex flex-col justify-between" data-category="hospital">
+                <div>
+                    <div class="flex items-center justify-between mb-4">
+                        <div class="w-12 h-12 rounded-2xl bg-amber-500/10 border border-amber-500/20 flex items-center justify-center text-amber-400">
+                            <span class="material-symbols-outlined text-2xl">confirmation_number</span>
+                        </div>
+                        <span class="text-[10px] font-bold uppercase tracking-wider text-amber-400 bg-amber-500/10 px-3 py-1 rounded-full border border-amber-500/20">Hospital Queue</span>
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-2">Smart Hospital Queue Tokens</h3>
+                    <p class="text-xs text-slate-400 mb-4 leading-relaxed">Skip the waiting room with digital OPD tokens, department selection, and real-time queue position tracking.</p>
+                </div>
+                <a href="Hospital Queue/stitch_medicare_login_page/elite_hospital_selection_luminous_design_refresh/code.html" class="w-full py-3 bg-amber-600/20 hover:bg-amber-600 text-amber-300 hover:text-white rounded-xl text-xs font-bold transition flex items-center justify-center gap-2 border border-amber-500/30">
+                    Get Queue Token <span class="material-symbols-outlined text-sm">local_hospital</span>
+                </a>
+            </div>
+
+            <!-- Card 11: Blood Procurement Marketplace -->
+            <div class="module-card glass-card p-6 rounded-3xl transition duration-300 flex flex-col justify-between" data-category="pharmacy">
+                <div>
+                    <div class="flex items-center justify-between mb-4">
+                        <div class="w-12 h-12 rounded-2xl bg-red-500/10 border border-red-500/20 flex items-center justify-center text-red-400">
+                            <span class="material-symbols-outlined text-2xl">bloodtype</span>
+                        </div>
+                        <span class="text-[10px] font-bold uppercase tracking-wider text-red-400 bg-red-500/10 px-3 py-1 rounded-full border border-red-500/20">Blood Procurement</span>
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-2">Blood Bank & Donor Safety</h3>
+                    <p class="text-xs text-slate-400 mb-4 leading-relaxed">Search real-time blood group availability, inspect donor clinical safety reports, and place urgent procurement requests.</p>
+                </div>
+                <a href="Blood marketplace/stitch_medicare_login_page/blood_procurement_search_results/code.html" class="w-full py-3 bg-red-600/20 hover:bg-red-600 text-red-300 hover:text-white rounded-xl text-xs font-bold transition flex items-center justify-center gap-2 border border-red-500/30">
+                    Find Blood Donors <span class="material-symbols-outlined text-sm">search</span>
+                </a>
+            </div>
+
+            <!-- Card 12: Mental Health & Wellbeing -->
+            <div class="module-card glass-card p-6 rounded-3xl transition duration-300 flex flex-col justify-between" data-category="wellness">
+                <div>
+                    <div class="flex items-center justify-between mb-4">
+                        <div class="w-12 h-12 rounded-2xl bg-pink-500/10 border border-pink-500/20 flex items-center justify-center text-pink-400">
+                            <span class="material-symbols-outlined text-2xl">psychology</span>
+                        </div>
+                        <span class="text-[10px] font-bold uppercase tracking-wider text-pink-400 bg-pink-500/10 px-3 py-1 rounded-full border border-pink-500/20">Mental Health</span>
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-2">Mental Health & Restorative Breathing</h3>
+                    <p class="text-xs text-slate-400 mb-4 leading-relaxed">AI emotional chat companion, mood analytics tracking, and interactive 3D restorative breathing sessions.</p>
+                </div>
+                <div class="flex flex-col gap-2">
+                    <a href="Mental Health/stitch_medicare_login_page/ultra_premium_mental_health_companion_immersive_ui/code.html" class="w-full py-2.5 bg-pink-600/20 hover:bg-pink-600 text-pink-300 hover:text-white rounded-xl text-xs font-bold transition flex items-center justify-center gap-2 border border-pink-500/30">
+                        Mental Health Hub <span class="material-symbols-outlined text-sm">favorite</span>
+                    </a>
+                    <a href="Mental Health/stitch_medicare_login_page/ultra_premium_restorative_breathing_experience/code.html" class="text-center text-xs text-slate-400 hover:text-pink-300 py-1">Start 3D Breathing Exercise →</a>
+                </div>
+            </div>
+
+            <!-- Card 13: Bio-Engineered Nutrition -->
+            <div class="module-card glass-card p-6 rounded-3xl transition duration-300 flex flex-col justify-between" data-category="wellness">
+                <div>
+                    <div class="flex items-center justify-between mb-4">
+                        <div class="w-12 h-12 rounded-2xl bg-green-500/10 border border-green-500/20 flex items-center justify-center text-green-400">
+                            <span class="material-symbols-outlined text-2xl">nutrition</span>
+                        </div>
+                        <span class="text-[10px] font-bold uppercase tracking-wider text-green-400 bg-green-500/10 px-3 py-1 rounded-full border border-green-500/20">Nutrition</span>
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-2">Bio-Engineered Nutrition Planner</h3>
+                    <p class="text-xs text-slate-400 mb-4 leading-relaxed">Daily calorie planner, AI grocery matrix list, meal photo sync, and personalized weekly nutrition strategies.</p>
+                </div>
+                <a href="Nutrition and dieat plan/stitch_medicare_login_page/daily_planner_silk_edition/code.html" class="w-full py-3 bg-green-600/20 hover:bg-green-600 text-green-300 hover:text-white rounded-xl text-xs font-bold transition flex items-center justify-center gap-2 border border-green-500/30">
+                    Open Diet Planner <span class="material-symbols-outlined text-sm">restaurant</span>
+                </a>
+            </div>
+
+            <!-- Card 14: Family Health Command Hub -->
+            <div class="module-card glass-card p-6 rounded-3xl transition duration-300 flex flex-col justify-between" data-category="wellness">
+                <div>
+                    <div class="flex items-center justify-between mb-4">
+                        <div class="w-12 h-12 rounded-2xl bg-violet-500/10 border border-violet-500/20 flex items-center justify-center text-violet-400">
+                            <span class="material-symbols-outlined text-2xl">family_restroom</span>
+                        </div>
+                        <span class="text-[10px] font-bold uppercase tracking-wider text-violet-400 bg-violet-500/10 px-3 py-1 rounded-full border border-violet-500/20">Family Hub</span>
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-2">Family Health Command Hub</h3>
+                    <p class="text-xs text-slate-400 mb-4 leading-relaxed">Unified dashboard for managing medical records, intakes, and reminders for all family members.</p>
+                </div>
+                <a href="Famly hub/stitch_medicare_login_page/family_health_command_vibrant_edition/code.html" class="w-full py-3 bg-violet-600/20 hover:bg-violet-600 text-violet-300 hover:text-white rounded-xl text-xs font-bold transition flex items-center justify-center gap-2 border border-violet-500/30">
+                    Family Dashboard <span class="material-symbols-outlined text-sm">groups</span>
+                </a>
+            </div>
+
+            <!-- Card 15: Diagnostic Image AI -->
+            <div class="module-card glass-card p-6 rounded-3xl transition duration-300 flex flex-col justify-between" data-category="ai">
+                <div>
+                    <div class="flex items-center justify-between mb-4">
+                        <div class="w-12 h-12 rounded-2xl bg-amber-500/10 border border-amber-500/20 flex items-center justify-center text-amber-400">
+                            <span class="material-symbols-outlined text-2xl">image_search</span>
+                        </div>
+                        <span class="text-[10px] font-bold uppercase tracking-wider text-amber-400 bg-amber-500/10 px-3 py-1 rounded-full border border-amber-500/20">Image AI</span>
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-2">AI Diagnostic Image Analysis</h3>
+                    <p class="text-xs text-slate-400 mb-4 leading-relaxed">Upload X-rays, MRIs, skin scans for instant AI diagnostic comparison and comprehensive radiology reporting.</p>
+                </div>
+                <a href="Diagnostic Image/stitch_medicare_login_page/ai_image_diagnosis_aura_health_edition/code.html" class="w-full py-3 bg-amber-600/20 hover:bg-amber-600 text-amber-300 hover:text-white rounded-xl text-xs font-bold transition flex items-center justify-center gap-2 border border-amber-500/30">
+                    Upload & Scan Image <span class="material-symbols-outlined text-sm">cloud_upload</span>
+                </a>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Global Footer -->
+    <footer class="max-w-7xl mx-auto px-6 pt-16 pb-8 border-t border-white/10 mt-16 text-center text-slate-400 text-xs">
+        <div class="flex items-center justify-center gap-3 mb-4">
+            <img src="app logo/medicare_combined_logo.png" alt="Logo" class="h-8 w-auto rounded-md">
+            <span class="font-bold text-white text-base">MediCare Unified Ecosystem</span>
+        </div>
+        <p class="mb-2">Powered by Advanced Clinical AI, Global Telemedicine, and Autonomous Healthcare Logistics.</p>
+        <p class="text-slate-400">© 2026 MediCare Inc. All 15 Modules Connected & Synchronized.</p>
+    </footer>
+
+    <!-- Load Global Nav Script -->
+    <script src="medicare-nav.js"></script>
+
+    <!-- Page Interaction Script -->
+    <script>
+        // Hero Search Filter
+        const searchInput = document.getElementById('hero-search');
+        const cards = document.querySelectorAll('.module-card');
+
+        searchInput.addEventListener('input', (e) => {
+            const query = e.target.value.toLowerCase();
+            cards.forEach(card => {
+                const text = card.textContent.toLowerCase();
+                if (text.includes(query)) {
+                    card.style.display = 'flex';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        });
+
+        // Filter Tabs
+        const tabs = document.querySelectorAll('.filter-tab');
+        tabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                tabs.forEach(t => {
+                    t.classList.remove('bg-blue-600', 'text-white');
+                    t.classList.add('bg-slate-800', 'text-slate-300');
+                });
+                tab.classList.remove('bg-slate-800', 'text-slate-300');
+                tab.classList.add('bg-blue-600', 'text-white');
+
+                const filter = tab.dataset.filter;
+                cards.forEach(card => {
+                    if (filter === 'all' || card.dataset.category === filter) {
+                        card.style.display = 'flex';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            });
+        });
+    </script>
+
+</body>
+</html>
